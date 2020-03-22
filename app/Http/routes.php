@@ -22,6 +22,9 @@
 |
 */
 
+Route::get('/test/getJora/', 'TestController@getJora');
+Route::get('/test/getFromDB/', 'TestController@getFromDB');
+
 Route::group(['middleware' => ['web']], function () {
 
     Route::get('/', function () {
@@ -33,5 +36,4 @@ Route::group(['middleware' => ['web']], function () {
     Route::delete('/task/{task}', 'TaskController@destroy');
 
     Route::auth();
-
 });
