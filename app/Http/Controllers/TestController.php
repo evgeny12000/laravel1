@@ -52,7 +52,7 @@ class TestController extends Controller
     public function getFromDB(Request $request)
     {
 
-        echo 'eeeeeeeeee';
+        echo 'muuuu';
         $results = DB::select('select * from users where id = :id', ['id' => 1]);
 
         echo "<pre>";
